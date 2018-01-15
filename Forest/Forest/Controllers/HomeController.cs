@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Forest.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +9,93 @@ namespace Forest.Controllers
 {
     public class HomeController : Controller
     {
+
+        private ForestEntities _forestEntities;
+
+        public HomeController()
+        {
+            _forestEntities = new ForestEntities();
+        }
+        // GET: Home
         public ActionResult Index()
         {
+            //Adds categories to a list
+            IList<Music_Category> _categories =
+                _forestEntities.Music_Category.ToList();
+
+            return View(_categories);
+        }
+
+        // GET: Home/Details/5
+        public ActionResult Details(int id)
+        {
             return View();
         }
 
-        public ActionResult About()
+        // GET: Home/Create
+        public ActionResult Create()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        // POST: Home/Create
+        [HttpPost]
+        public ActionResult Create(FormCollection collection)
         {
-            ViewBag.Message = "Your contact page.";
+            try
+            {
+                // TODO: Add insert logic here
 
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Home/Edit/5
+        public ActionResult Edit(int id)
+        {
             return View();
+        }
+
+        // POST: Home/Edit/5
+        [HttpPost]
+        public ActionResult Edit(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add update logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
+        // GET: Home/Delete/5
+        public ActionResult Delete(int id)
+        {
+            return View();
+        }
+
+        // POST: Home/Delete/5
+        [HttpPost]
+        public ActionResult Delete(int id, FormCollection collection)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
         }
     }
 }
