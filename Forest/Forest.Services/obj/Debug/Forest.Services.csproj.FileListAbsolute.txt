@@ -1,0 +1,11 @@
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\Forest.Services.dll
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\Forest.Services.pdb
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\Forest.Data.dll
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\EntityFramework.dll
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\Forest.Data.pdb
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\Forest.Data.dll.config
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\bin\Debug\EntityFramework.xml
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\obj\Debug\Forest.Services.csprojResolveAssemblyReference.cache
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\obj\Debug\Forest.Services.csproj.CoreCompileInputs.cache
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\obj\Debug\Forest.Services.dll
+F:\MyWork\System Design and Development Project\Forest\Forest\Forest.Services\obj\Debug\Forest.Services.pdb
