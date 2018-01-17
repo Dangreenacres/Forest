@@ -275,6 +275,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Forest.Data\Forest.Data.csproj">
+      <Project>{b774e5d1-12ee-4a7a-a2ed-eed92d94529c}</Project>
+      <Name>Forest.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Forest.Services\Forest.Services.csproj">
+      <Project>{9fd7a833-b2a0-4308-b51a-cbdad9b5fedf}</Project>
+      <Name>Forest.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
