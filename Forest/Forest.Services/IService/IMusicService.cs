@@ -8,7 +8,7 @@ namespace Forest.Services.IService
 {
     public interface IMusicService
     {
-        IList<Forest.Data.Music_Category> GetMusicCategories();
-
+        IList<Data.Music_Category> GetMusicCategories();
+        IList<Data.Music_Recording> GetMusicRecordings(string genre);
     }
 }

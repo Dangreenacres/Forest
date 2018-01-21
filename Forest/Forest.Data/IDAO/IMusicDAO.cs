@@ -8,6 +8,7 @@ namespace Forest.Data.IDAO
 {
     public interface IMusicDAO
     {
-        IList<Forest.Data.Music_Category> GetMusicCategories();
+        IList<Music_Category> GetMusicCategories();
+        IList<Music_Recording> GetMusicRecordings(string genre);
     }
 }

@@ -9,17 +9,22 @@ namespace Forest.Controllers
     public class MusicController : Controller
     {
 
-        private Forest.Services.IService.IMusicService _musicService;
+        private Services.IService.IMusicService _musicService;
 
         public MusicController()
         {
-            _musicService = new Forest.Services.Service.MusicService();
+            _musicService = new Services.Service.MusicService();
         }
 
         // GET: Music
         public ActionResult Categories()
         {
             return View(_musicService.GetMusicCategories());
+        }
+
+        public ActionResult GetMusicRecordings(string genre)
+        {
+            return View(_musicService.GetMusicRecordings(genre));
         }
 
         // GET: Music/Details/5
