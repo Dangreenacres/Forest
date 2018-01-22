@@ -260,7 +260,7 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Music\Categories.cshtml" />
-    <Content Include="Views\Music\GetMusicRecordings.cshtml" />
+    <Content Include="Views\Music\Recordings.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

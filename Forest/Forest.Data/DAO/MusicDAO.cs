@@ -29,6 +29,7 @@ namespace Forest.Data.DAO
             IQueryable<Music_Recording> _recordings;
             _recordings = from recording
                           in _context.Music_Recording
+                          where recording.Genre == genre
                           select recording;
             return _recordings.ToList();
         }

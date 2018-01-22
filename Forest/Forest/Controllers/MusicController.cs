@@ -22,7 +22,7 @@ namespace Forest.Controllers
             return View(_musicService.GetMusicCategories());
         }
 
-        public ActionResult GetMusicRecordings(string genre)
+        public ActionResult Recordings(string genre)
         {
             return View(_musicService.GetMusicRecordings(genre));
         }
