@@ -43,5 +43,21 @@ namespace Forest.Data.DAO
                          select recording;
             return _recording.ToList().First();
         }
+
+        public void EditMusicRecording(Music_Recording recording)
+        {
+            Music_Recording record = GetMusicRecording(recording.Id);
+
+            record.Artist = recording.Artist;
+            record.Genre = recording.Genre;
+            record.Image_Name = recording.Image_Name;
+            record.Num_Tracks = recording.Num_Tracks;
+            record.Price = recording.Price;
+            record.Released = recording.Released;
+            record.Stock_Count = recording.Stock_Count;
+            record.Title = recording.Title;
+            //record.Url = recording.Url;
+            _context.SaveChanges();
+        }
     }
 }
