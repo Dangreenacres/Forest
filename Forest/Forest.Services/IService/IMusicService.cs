@@ -10,5 +10,6 @@ namespace Forest.Services.IService
     {
         IList<Data.Music_Category> GetMusicCategories();
         IList<Data.Music_Recording> GetMusicRecordings(string genre);
+        Data.Music_Recording GetMusicRecording(int id);
     }
 }

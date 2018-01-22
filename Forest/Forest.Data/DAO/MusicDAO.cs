@@ -33,5 +33,15 @@ namespace Forest.Data.DAO
                           select recording;
             return _recordings.ToList();
         }
+
+        public Music_Recording GetMusicRecording(int id)
+        {
+            IQueryable<Music_Recording> _recording;
+            _recording = from recording
+                         in _context.Music_Recording
+                         where recording.Id == id
+                         select recording;
+            return _recording.ToList().First();
+        }
     }
 }

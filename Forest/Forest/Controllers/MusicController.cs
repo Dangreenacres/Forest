@@ -22,9 +22,15 @@ namespace Forest.Controllers
             return View(_musicService.GetMusicCategories());
         }
 
+        // Gets a list of recordings with a selected genre
         public ActionResult Recordings(string genre)
         {
             return View(_musicService.GetMusicRecordings(genre));
+        }
+
+        public ActionResult Recording(int id)
+        {
+            return View(_musicService.GetMusicRecording(id));
         }
 
         // GET: Music/Details/5
