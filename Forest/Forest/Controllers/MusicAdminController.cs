@@ -21,8 +21,8 @@ namespace Forest.Controllers
             return View();
         }
 
-        [HttpGet]
         // GET: MusicAdmin/Details/5
+        [HttpGet]
         public ActionResult EditMusicRecording(int id)
         {
             return View(_musicService.GetMusicRecording(id));
@@ -43,10 +43,24 @@ namespace Forest.Controllers
         }
 
         // GET: MusicAdmin/Create
-        public ActionResult AddMusicRecording(string genre, Music_Recording recording)
+        [HttpGet]
+        public ActionResult AddMusicRecording(string Genre)
         {
-            _musicService.AddMusicRecording(recording);
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMusicRecording(Music_Recording recording)
+        {
+            try
+            {
+                _musicService.AddMusicRecording(recording);
+            }
+            catch
+            {
+
+            }
+            return RedirectToAction("Recordings", new { genre = recording.Genre, controller = "Music" });
         }
 
         // POST: MusicAdmin/Create
