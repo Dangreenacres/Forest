@@ -42,5 +42,10 @@ namespace Forest.Services.Service
         {
             _musicDAO.AddMusicRecording(recording);
         }
+
+        public void DeleteMusicRecording(Music_Recording recording)
+        {
+            _musicDAO.DeleteMusicRecording(recording);
+        }
     }
 }

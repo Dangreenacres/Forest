@@ -21,29 +21,7 @@ namespace Forest.Controllers
             return View();
         }
 
-        // GET: MusicAdmin/Details/5
-        [HttpGet]
-        public ActionResult EditMusicRecording(int id)
-        {
-            return View(_musicService.GetMusicRecording(id));
-        }
-
-        [HttpPost]
-        public ActionResult EditMusicRecording(int id, Music_Recording recording)
-        {
-            try
-            {
-                _musicService.EditMusicRecording(recording);
-            }
-            catch
-            {
-
-            }
-            return RedirectToAction("Recordings", new { genre = recording.Genre, controller = "Music" });
-        }
-
         // GET: MusicAdmin/Create
-        [HttpGet]
         public ActionResult AddMusicRecording(string Genre)
         {
             return View();
@@ -63,59 +41,46 @@ namespace Forest.Controllers
             return RedirectToAction("Recordings", new { genre = recording.Genre, controller = "Music" });
         }
 
-        // POST: MusicAdmin/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         // GET: MusicAdmin/Edit/5
-        public ActionResult Edit(int id)
+        [HttpGet]
+        public ActionResult EditMusicRecording(int id)
         {
-            return View();
+            return View(_musicService.GetMusicRecording(id));
         }
 
         // POST: MusicAdmin/Edit/5
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult EditMusicRecording(int id, Music_Recording recording)
         {
             try
             {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                _musicService.EditMusicRecording(recording);
             }
             catch
             {
-                return View();
+
             }
+            return RedirectToAction("Recordings", new { genre = recording.Genre, controller = "Music" });
         }
 
         // GET: MusicAdmin/Delete/5
-        public ActionResult Delete(int id)
+        [HttpGet]
+        public ActionResult DeleteMusicRecording(int id)
         {
-            return View();
+            return View(_musicService.GetMusicRecording(id));
         }
 
         // POST: MusicAdmin/Delete/5
         [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
+        public ActionResult Delete(int id, Music_Recording recording)
         {
             try
             {
-                // TODO: Add delete logic here
+                Music_Recording _recording;
+                _recording = _musicService.GetMusicRecording(recording.Id);
+                _musicService.DeleteMusicRecording(_recording);
 
-                return RedirectToAction("Index");
+                return RedirectToAction("Recordings", new { genre = recording.Genre, controller = "Music" });
             }
             catch
             {

@@ -67,7 +67,7 @@
         <td>
             @Html.ActionLink("Edit", "EditMusicRecording", new { id=item.Id, controller="MusicAdmin" }) |
             @Html.ActionLink("Details", "Recording", new { id = item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("Delete", "DeleteMusicRecording", new { id=item.Id, controller = "MusicAdmin" })
         </td>
     </tr>
 }

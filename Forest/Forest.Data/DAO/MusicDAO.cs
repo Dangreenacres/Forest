@@ -65,5 +65,11 @@ namespace Forest.Data.DAO
             _context.Music_Recording.Add(recording);
             _context.SaveChanges();
         }
+
+        public void DeleteMusicRecording(Music_Recording recording)
+        {
+            _context.Music_Recording.Remove(recording);
+            _context.SaveChanges();
+        }
     }
 }
