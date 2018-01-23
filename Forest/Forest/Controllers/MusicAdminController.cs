@@ -43,8 +43,9 @@ namespace Forest.Controllers
         }
 
         // GET: MusicAdmin/Create
-        public ActionResult Create()
+        public ActionResult AddMusicRecording(string genre, Music_Recording recording)
         {
+            _musicService.AddMusicRecording(recording);
             return View();
         }
 

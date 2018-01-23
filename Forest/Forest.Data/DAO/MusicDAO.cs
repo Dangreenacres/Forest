@@ -59,5 +59,11 @@ namespace Forest.Data.DAO
             //record.Url = recording.Url;
             _context.SaveChanges();
         }
+
+        public void AddMusicRecording(Music_Recording recording)
+        {
+            _context.Music_Recording.Add(recording);
+            _context.SaveChanges();
+        }
     }
 }

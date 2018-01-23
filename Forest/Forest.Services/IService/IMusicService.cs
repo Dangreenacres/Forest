@@ -13,5 +13,6 @@ namespace Forest.Services.IService
         IList<Data.Music_Recording> GetMusicRecordings(string genre);
         Data.Music_Recording GetMusicRecording(int id);
         void EditMusicRecording(Music_Recording recording);
+        void AddMusicRecording(Music_Recording recording);
     }
 }
