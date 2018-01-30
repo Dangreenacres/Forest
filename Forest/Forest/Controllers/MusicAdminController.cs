@@ -9,10 +9,9 @@ namespace Forest.Controllers
 {
     public class MusicAdminController : ApplicationController
     {
-        //private Services.IService.IMusicService _musicService;
         public MusicAdminController()
         {
-            //_musicService = new Services.Service.MusicService();
+
         }
 
         // GET: MusicAdmin
@@ -23,8 +22,21 @@ namespace Forest.Controllers
 
         // GET: MusicAdmin/Create
         [HttpGet]
-        public ActionResult AddMusicRecording(string Genre)
+        public ActionResult AddMusicRecording(string selectedGenre)
         {
+            List<SelectListItem> genreList = new List<SelectListItem>();
+            foreach(var item in _musicService.GetMusicCategories())
+            {
+                genreList.Add(
+                    new SelectListItem()
+                    {
+                        Text = item.Genre,
+                        Value = item.Id.ToString(),
+                        Selected = (item.Genre == (selectedGenre) ? true : false)
+                    }
+                );
+            }
+            ViewBag.genreList = genreList;
             return View();
         }
 

@@ -8,11 +8,9 @@ namespace Forest.Controllers
 {
     public class MusicController : ApplicationController
     {
-        //private Services.IService.IMusicService _musicService;
-
         public MusicController()
         {
-            //_musicService = new Services.Service.MusicService();
+
         }
 
         // GET: Music
@@ -20,12 +18,6 @@ namespace Forest.Controllers
         {
             return View(ViewBag.genres);
         }
-
-        // Gets a list of recordings with a selected genre
-        //public ActionResult Recordings(string genre)
-        //{
-        //    return View(_musicService.GetMusicRecordings(genre));
-        //}
 
         public ActionResult Recordings(int genre)
         {
