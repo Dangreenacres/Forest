@@ -7,12 +7,12 @@ using System.Web.Mvc;
 
 namespace Forest.Controllers
 {
-    public class MusicAdminController : Controller
+    public class MusicAdminController : ApplicationController
     {
-        private Services.IService.IMusicService _musicService;
+        //private Services.IService.IMusicService _musicService;
         public MusicAdminController()
         {
-            _musicService = new Services.Service.MusicService();
+            //_musicService = new Services.Service.MusicService();
         }
 
         // GET: MusicAdmin

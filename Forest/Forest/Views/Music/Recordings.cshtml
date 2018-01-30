@@ -65,9 +65,10 @@
             @Html.DisplayFor(modelItem => item.Released)
         </td>
         <td>
-            @Html.ActionLink("Edit", "EditMusicRecording", new { id=item.Id, controller= "MusicAdmin" }) |
-            @Html.ActionLink("Details", "Recording", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "DeleteMusicRecording", new { id=item.Id })
+
+            <input type="button" title="Edit" value="Edit"  class="btn btn-warning" onclick="location.href='@Url.Action("EditMusicRecording", new { id = item.Id, Controller = "MusicAdmin" })'" />
+            <input type="button" title="Details" value="Details"  class="btn btn-info" onclick="location.href='@Url.Action("Recording", new { id = item.Id})'"/>
+            <input type="button" title="Delete" value="Delete"  class="btn btn-danger" onclick="location.href='@Url.Action("DeleteMusicRecording", new { id = item.Id})'"/>
         </td>
     </tr>
 }
