@@ -12,10 +12,10 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Artist" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="Title" Type="nchar" MaxLength="50" Nullable="false" />
-    <Property Name="Genre" Type="nchar" MaxLength="10" Nullable="false" />
-    <Property Name="Image_Name" Type="nchar" MaxLength="50" />
+    <Property Name="Artist" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="Title" Type="char" MaxLength="50" Nullable="false" />
+    <Property Name="Genre" Type="int" Nullable="false" />
+    <Property Name="Image_Name" Type="char" MaxLength="50" />
     <Property Name="Num_Tracks" Type="int" />
     <Property Name="Price" Type="float" Nullable="false" />
     <Property Name="Stock_Count" Type="int" Nullable="false" />

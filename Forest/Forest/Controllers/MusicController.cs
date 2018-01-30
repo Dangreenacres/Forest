@@ -22,7 +22,12 @@ namespace Forest.Controllers
         }
 
         // Gets a list of recordings with a selected genre
-        public ActionResult Recordings(string genre)
+        //public ActionResult Recordings(string genre)
+        //{
+        //    return View(_musicService.GetMusicRecordings(genre));
+        //}
+
+        public ActionResult Recordings(int genre)
         {
             return View(_musicService.GetMusicRecordings(genre));
         }

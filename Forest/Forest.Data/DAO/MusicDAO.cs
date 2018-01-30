@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Forest.Data.IDAO;
+using Forest.Data.BEANS;
 
 namespace Forest.Data.DAO
 {
@@ -24,14 +25,36 @@ namespace Forest.Data.DAO
             return _categories.ToList();
         }
 
-        public IList<Music_Recording> GetMusicRecordings(string genre)
+        //public IList<Music_Recording> GetMusicRecordings(string genre)
+        //{
+        //    IQueryable<Music_Recording> _recordings;
+        //    _recordings = from recording
+        //                  in _context.Music_Recording
+        //                  where recording.Genre == genre
+        //                  select recording;
+        //    return _recordings.ToList();
+        //}
+
+        public IList<MusicBEAN> GetMusicRecordings(int genre)
         {
-            IQueryable<Music_Recording> _recordings;
-            _recordings = from recording
-                          in _context.Music_Recording
-                          where recording.Genre == genre
-                          select recording;
-            return _recordings.ToList();
+            IQueryable<MusicBEAN> _musicBEANs = from recs in _context.Music_Recording
+                                                from cats in _context.Music_Category
+                                                where recs.Genre == cats.Id
+                                                where cats.Id == genre
+                                                select new MusicBEAN
+                                                {
+                                                    Id = recs.Id,
+                                                    Artist = recs.Artist,
+                                                    Title = recs.Title,
+                                                    Genre = cats.Genre,
+                                                    Image_Name = recs.Image_Name,
+                                                    Num_Tracks = recs.Num_Tracks,
+                                                    Price = recs.Price,
+                                                    Stock_Count = recs.Stock_Count,
+                                                    Released = recs.Released
+                                                    //Url = recs.Url
+                                                };
+            return _musicBEANs.ToList();
         }
 
         public Music_Recording GetMusicRecording(int id)
