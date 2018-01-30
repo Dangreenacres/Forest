@@ -6,7 +6,7 @@
     <edmx:Diagrams>
       <Diagram DiagramId="09e7adf25bca4fe891b9b57af8b35093" Name="Diagram1">
         <EntityTypeShape EntityType="ForestModel.Music_Category" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="ForestModel.Music_Recording" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ForestModel.Music_Recording" Width="1.5" PointX="3.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
