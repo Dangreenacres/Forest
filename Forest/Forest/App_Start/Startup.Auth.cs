@@ -58,11 +58,11 @@ namespace Forest
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "225376201494-9b5mfhlf6sbu3pm82f6k8ns7dm4qvmjj.apps.googleusercontent.com",
+                ClientSecret = "LxhjGkMqmaXTSoMmfq9r91JD"
+            });
         }
     }
 }

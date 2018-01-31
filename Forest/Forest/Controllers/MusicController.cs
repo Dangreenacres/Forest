@@ -6,7 +6,8 @@ using System.Web.Mvc;
 
 namespace Forest.Controllers
 {
-    [Authorize(Roles = "User")]
+    //[Authorize(Roles = "User")]
+    [RequireHttps]
     public class MusicController : ApplicationController
     {
         public MusicController()
