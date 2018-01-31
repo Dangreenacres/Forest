@@ -25,15 +25,11 @@ namespace Forest.Data.DAO
             return _categories.ToList();
         }
 
-        //public IList<Music_Recording> GetMusicRecordings(string genre)
-        //{
-        //    IQueryable<Music_Recording> _recordings;
-        //    _recordings = from recording
-        //                  in _context.Music_Recording
-        //                  where recording.Genre == genre
-        //                  select recording;
-        //    return _recordings.ToList();
-        //}
+        public void AddMusicCategory(Music_Category category)
+        {
+            _context.Music_Category.Add(category);
+            _context.SaveChanges();
+        }
 
         public IList<MusicBEAN> GetMusicRecordings(int genre)
         {

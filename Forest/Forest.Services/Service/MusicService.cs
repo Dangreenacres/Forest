@@ -24,10 +24,10 @@ namespace Forest.Services.Service
             return _musicDAO.GetMusicCategories();
         }
 
-        //public IList<Music_Recording> GetMusicRecordings(string genre)
-        //{
-        //    return _musicDAO.GetMusicRecordings(genre);
-        //}
+        public void AddMusicCategory(Music_Category category)
+        {
+            _musicDAO.AddMusicCategory(category);
+        }
 
         public IList<MusicBEAN> GetMusicRecordings(int genre)
         {

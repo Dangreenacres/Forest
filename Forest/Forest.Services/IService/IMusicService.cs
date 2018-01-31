@@ -11,6 +11,7 @@ namespace Forest.Services.IService
     public interface IMusicService
     {
         IList<Music_Category> GetMusicCategories();
+        void AddMusicCategory(Music_Category category);
         //IList<Music_Recording> GetMusicRecordings(string genre);
         IList<MusicBEAN> GetMusicRecordings(int genre);
         Music_Recording GetMusicRecording(int id);

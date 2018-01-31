@@ -54,6 +54,26 @@ namespace Forest.Controllers
             }
         }
 
+        [HttpGet]
+        public ActionResult AddMusicCategory()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddMusicCategory(Music_Category category)
+        {
+            try
+            {
+                _musicService.AddMusicCategory(category);
+                return RedirectToAction("Categories", new { controller = "Music" });
+            }
+            catch
+            {
+                return View();
+            }
+        }
+
         // GET: MusicAdmin/Edit/5
         [HttpGet]
         public ActionResult EditMusicRecording(int id)
