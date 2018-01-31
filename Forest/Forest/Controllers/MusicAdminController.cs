@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Forest.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class MusicAdminController : ApplicationController
     {
         public MusicAdminController()
